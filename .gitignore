@@ -80,6 +80,7 @@ node_modules/
 #####################
 
 .tmp/
+.vscode/
 
 # Ignore compiled CSS from repository
 

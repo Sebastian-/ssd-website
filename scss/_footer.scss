@@ -1,0 +1,11 @@
+// footer styles
+
+footer {
+    background-color: $footer-bg-color;
+    color: $text-color-light;
+    height: 100px;
+
+    p {
+        line-height: 100px;
+    }
+}
