@@ -3,11 +3,15 @@
 
 // Imports
 
-// Utility Imports
-@import 'resets';
+// Utility
 @import 'variables';
 
+// Fontawesome 
+@import 'fontawesome/fontawesome.scss';
+// TODO: import required fontawesome packs
+
 // Resets and Defaults
+@import 'resets';
 
 // Site Sections
 @import 'header';
