@@ -3,6 +3,7 @@ $brand-color: #8540c5;
 $body-bg-color: #303030;
 $footer-bg-color: rgb(33, 45, 59);
 $wrapper-bg-color: white;
+
 // Text Colors
 $text-color-dark: black;
 $text-color-light: white;
@@ -12,8 +13,8 @@ $brand-color-dark: darken($brand-color, 20);
 $brand-color-light: lighten($brand-color, 20);
 
 // Fonts
-$body-font: Georgia, Times, Times New Roman, serif;
-$heading-font: Tahoma, Verdana, Segoe, sans-serif;
+$body-font: 'Open Sans', sans-serif;
+$heading-font: 'Staatliches', cursive;
 // Typographic Defualts
 $line-height: 1.4;
 
@@ -21,6 +22,7 @@ $line-height: 1.4;
 $padding: 30px;
 // Grid Values
 $gutter: 2;
+$header-height: 36px;
 
 // Function to determine column width
 // takes two numerical parameters:

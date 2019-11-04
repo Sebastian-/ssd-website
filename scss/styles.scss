@@ -6,6 +6,9 @@
 // Utility
 @import 'variables';
 
+// Typography
+@import 'typography';
+
 // Fontawesome 
 @import 'fontawesome/fontawesome.scss';
 // TODO: import required fontawesome packs
@@ -17,4 +20,5 @@
 @import 'header';
 @import 'footer';
 
-// Specialty Items
+// Pgae Styles
+@import 'homepage.scss';
