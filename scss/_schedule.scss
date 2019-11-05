@@ -1,0 +1,148 @@
+// TODO:
+//   highlighting of current day within list view
+
+.calendar {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+
+  .month {
+    h2 {
+      text-align: center;
+      padding: 20px 0;
+      margin: 0;
+      background-color: #1f7a8c;
+      color: #fafafa;
+      font-size: 2em;
+    }
+
+    .weekday-heading {
+      display: none;
+    }
+
+    .day {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 5px 15px;
+      font-size: 1.2em;
+      border-bottom: 1px solid #1f7a8c;
+
+      & > * {
+        width: 100%;
+        margin: 5px 0;
+      }
+      
+      h3 {
+        font-family: $body-font;
+        font-size: inherit;
+        text-transform: capitalize;
+      }
+
+      &:nth-of-type(2n) {
+        background-color: #fff;
+      }
+    }
+
+    .weekday {
+      text-transform: capitalize;
+      order: -1;
+    }
+
+    .friday {
+      border-bottom: 5px solid #1f7a8c;
+    }
+
+  }
+
+}
+
+
+// .calendar{
+//   max-width: 1100px;
+//   margin: 0 auto;
+//   padding: 0 20px 20px 20px;
+//   background-color: #eaeaea;
+
+//   .month {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr);
+//     grid-template-rows: repeat(8, auto);
+//     gap: 3px;
+//     padding-top: 30px;
+
+//     h2 {
+//       grid-row: 1 / 2;
+//       grid-column: 1 / 6;
+//       text-align: center;
+//       margin: 10px 0;
+//     }
+
+//     .weekday-heading {
+//       grid-row: 2 / 3;
+//       text-align: center;
+//       margin: 0;
+//       background-color: #bfdbf7;
+//       padding: 5px 0;
+//     }
+
+//     .day {
+//       background-color: #fff;
+//       height: 155px;
+//     }
+
+//     .today {
+//       border: 2px solid #1f7a8c;
+//     }
+
+
+//     // Grid layout
+//     .monday {
+//       grid-column: 1 / 2;
+//     }
+    
+//     .tuesday {
+//       grid-column: 2 / 3;
+//     }
+    
+//     .wednesday {
+//       grid-column: 3 / 4;
+//     }
+    
+//     .thursday {
+//       grid-column: 4 / 5;
+//     }
+    
+//     .friday {
+//       grid-column: 5 / 6;
+//     }
+
+//     .week-1 {
+//       grid-row: 3 / 4;
+//     }
+    
+//     .week-2 {
+//       grid-row: 4 / 5;
+//     }
+    
+//     .week-3 {
+//       grid-row: 5 / 6;
+//     }
+    
+//     .week-4 {
+//       grid-row: 6 / 7;
+//     }
+    
+//     .week-5 {
+//       grid-row: 7 / 8;
+//     }
+    
+//     .week-6 {
+//       grid-row: 8 / 9;
+//     }
+//   }
+// }
+

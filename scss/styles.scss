@@ -10,7 +10,7 @@
 @import 'typography';
 
 // Fontawesome 
-@import 'fontawesome/fontawesome.scss';
+@import 'fontawesome/fontawesome';
 // TODO: import required fontawesome packs
 
 // Resets and Defaults
@@ -21,4 +21,5 @@
 @import 'footer';
 
 // Pgae Styles
-@import 'homepage.scss';
+@import 'schedule';
+@import 'homepage';
