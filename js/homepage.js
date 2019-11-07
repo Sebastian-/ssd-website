@@ -32,9 +32,14 @@
 // }
 
 $(function() {
-    $('.accordion-item h2').each(function() {
+    $('.accordion-item .title-bar').each(function() {
         $(this).click(toggleSection);
     })
+
+    // $('.accordion-content').each(element, new SimpleBar());
+    // $('.accordion-content').each(function(index, element) {
+    //     new SimpleBar(element);
+    // });
 });
 
 function toggleSection() {
@@ -42,17 +47,18 @@ function toggleSection() {
 
     $('.accordion-item').not($container).each(function() {
         $(this).addClass('collapse');
+        $(this).removeClass('active');
     });
     $container.removeClass('collapse');
     $container.addClass('active');
 
-    let $content = $(this).parent().find('.accordion-content');
-    let height = $content.prop('scrollHeight');
-    $content.css('height', height + 'px');
+    // let $content = $(this).parent().find('.accordion-content');
+    // let height = $content.prop('scrollHeight');
+    // $content.css('height', height + 'px');
 
-    $('.accordion-item').not($container).each(function() {
-        $(this).find('.accordion-content').css('height', 0);
-    });
+    // $('.accordion-item').not($container).each(function() {
+    //     $(this).find('.accordion-content').css('height', 0);
+    // });
 }
 
 // function toggleSection() {
