@@ -4,81 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <script src="script/jquery3.4.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Staatliches&display=swap" rel="stylesheet">
+    
     <title>BCIT SSD - Staff</title>
 </head>
 <body>
-     <div class="wrapper">
-         <header>
-            <h1>BCIT SSD</h1>
-         </header>
-         <main class="staff">
-            <div class="staff-container">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Phil Weier</h5>
-                    <p class="card-text">Phil teaches System Analysis and Design, Relational Databases, C# - OOP, .NET Core - MVC,.NET Core Web API, iOS, Android, Passion Project, Final Project, Industry Projects, and Demo Day.</p>
-                    <p class="card-text"><small class="text-muted">pweier@learn.bcit.ca</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Micheal Whyte</h5>
-                    <p class="card-text">Micheal teaches HTML5/CSS3 and Frontend Project Course.</p>
-                    <p class="card-text"><small class="text-muted">mwhyte13@learn.bcit.ca</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Jason Harrison</h5>
-                    <p class="card-text">Jason teaches Javascript and Laravel.</p>
-                     <p class="card-text"><small class="text-muted">jharrison3@learn.bcit.ca</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Jeff Parker</h5>
-                    <p class="card-text">Jeff teaches PHP.</p>
-                    <p class="card-text"><small class="text-muted">jparker6@learn.bcit.ca</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Medhat Elmasry</h5>
-                    <p class="card-text">Medhat teachs Fullstack Js.</p>
-                    <p class="card-text"><small class="text-muted">medhatElmasry7@learn.bcit.ca</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Alex Cooper</h5>
-                    <p class="card-text">TAle teaches Angular, React, and Amazon Web Service, X-Platform Mobile, Mobile Project.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Pat McGee
-                    </h5>
-                    <p class="card-text">Pat teaches Web Application Security.</p>
-                    <p class="card-text"><small class="text-muted">pmcgee@learn.bcit.ca</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Marlene Delanghe</h5>
-                    <p class="card-text">Marlene teaches Presentation Skills, Resume Writing Essentials, Interview Skills, Mock Interviews</p>
-                    <p class="card-text"><small class="text-muted">marleneDelanghe3@learn.bcit.ca</small></p>
-                  </div>
-                </div>
-            </div>
-         </main>
-         <footer>
-            <p>&copy; 2019 Eric Bourne and Sebastian Murgu</p>
-         </footer>
-     </div>
-<script src="script/bootstrap.js"></script>
+    <header>
+      <div class="header-content">
+          <div class="header-top">
+              <h1>BCIT SSD</h1>
+              <button class="hamburger" id="hamburger">
+                  <span class="hamburger-content">
+                      <span class="text">Menu</span>
+                      <span class="bar"></span>
+                  </span><!-- end button-content -->
+              </button>
+          </div>
+          <nav>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="schedule.html">Schedule</a></li>
+                  <li><a href="students.html">Students</a></li>
+                  <li><a href="staff.html">Staff</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav> 
+      </div>
+  </header>
+  <main class="staff-page">
+    <div class="card-container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Phil Weier</h3>
+            <p class="card-text">Phil teaches System Analysis and Design, Relational Databases, C# - OOP, .NET Core - MVC,.NET Core Web API, iOS, Android, Passion Project, Final Project, Industry Projects, and Demo Day.</p>
+            <p class="card-text"><small class="text-muted">pweier@learn.bcit.ca</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Micheal Whyte</h3>
+            <p class="card-text">Micheal teaches HTML5/CSS3 and Frontend Project Course.</p>
+            <p class="card-text"><small class="text-muted">mwhyte13@learn.bcit.ca</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Jason Harrison</h3>
+            <p class="card-text">Jason teaches Javascript and Laravel.</p>
+              <p class="card-text"><small class="text-muted">jharrison3@learn.bcit.ca</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Jeff Parker</h3>
+            <p class="card-text">Jeff teaches PHP.</p>
+            <p class="card-text"><small class="text-muted">jparker6@learn.bcit.ca</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Medhat Elmasry</h3>
+            <p class="card-text">Medhat teachs Fullstack Js.</p>
+            <p class="card-text"><small class="text-muted">medhatElmasry7@learn.bcit.ca</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Alex Cooper</h3>
+            <p class="card-text">TAle teaches Angular, React, and Amazon Web Service, X-Platform Mobile, Mobile Project.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Pat McGee
+            </h3>
+            <p class="card-text">Pat teaches Web Application Security.</p>
+            <p class="card-text"><small class="text-muted">pmcgee@learn.bcit.ca</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Marlene Delanghe</h3>
+            <p class="card-text">Marlene teaches Presentation Skills, Resume Writing Essentials, Interview Skills, Mock Interviews</p>
+            <p class="card-text"><small class="text-muted">marleneDelanghe3@learn.bcit.ca</small></p>
+          </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2019 Eric Bourne and Sebastian Murgu</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/header.js"></script>
 </body>
 </html>

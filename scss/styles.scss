@@ -21,16 +21,14 @@
 @import 'body';
 @import 'header';
 @import 'footer';
+@import 'card-container';
+@import 'hamburger';
+@import 'nav';
+@import 'main';
 
+// Page Styles
+@import 'schedule';
+@import 'homepage';
 @import 'contactPage';
 @import 'resources';
 @import 'overview';
-@import 'staff';
-
-@import 'hamburger';
-@import 'nav';
-
-
-// Pgae Styles
-@import 'schedule';
-@import 'homepage';

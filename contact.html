@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact Page</title>
+  <title>BCIT SSD - Contact</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/bootstrap.css">
-  <script src="script/jquery3.4.1.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Staatliches&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <script>
 $(document).ready(function () {
@@ -39,14 +40,34 @@ $('#myform').validate({ // initialize the plugin
   </script>
 </head>
 <body>
-<div class="wrapper">
   <header>
-      <h1>BCIT SSD - Contacts</h1>
+    <div class="header-content">
+        <div class="header-top">
+            <h1>BCIT SSD</h1>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-content">
+                    <span class="text">Menu</span>
+                    <span class="bar"></span>
+                </span><!-- end button-content -->
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> 
+    </div>
   </header>
-<main>
+  <main class="contact-page">
 
-<div class="container">
-    <h2>Contact</h2>
+  <div class="container">
+    <h1>Contact</h1>
     <form id="myform">
       <div class="form-row">
         <div class="form-group col-lg-3">
@@ -105,8 +126,7 @@ $('#myform').validate({ // initialize the plugin
   <footer>
       <p>&copy; 2019 Eric Bourne and Sebastian Murgu</p>
   </footer>
-</div>
 <script src="script/validator.js"></script>
-<script src="script/bootstrap.js"></script>
+<script src="js/header.js"></script>  
 </body>
 </html>

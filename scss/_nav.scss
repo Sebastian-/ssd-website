@@ -19,6 +19,8 @@ nav {
         
         #{$link-hover-selector} {
             background-color: rgba(white, 0.3);
+            text-decoration: none;
+            color: $text-color-light;
         }
 
     }

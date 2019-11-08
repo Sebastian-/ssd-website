@@ -1,0 +1,29 @@
+// general page styles
+
+.schedule-page,
+.students-page,
+.staff-page,
+.courses-page,
+.contact-page,
+.resources-page {
+    max-width: $max-page-width;
+    margin: 20px auto;
+    padding: $padding;
+    width: 100%;
+    
+
+    h1 {
+        font-size: $h1-size;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: $h2-size;
+    }
+
+    h3 {
+        font-size: $h3-size;
+    }
+
+}
