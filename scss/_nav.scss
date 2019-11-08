@@ -1,0 +1,48 @@
+// Main Navigation Styles
+nav {
+    background-color: #212d3b;
+
+    ul {
+        @include flatten;
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        line-height: 50px;
+        color: $text-color-light;
+        line-height: $nav-height;
+        text-align: center;
+        font-size: 1.2em;
+        text-decoration: none;
+        outline: none;
+        
+        #{$link-hover-selector} {
+            background-color: rgba(white, 0.3);
+        }
+
+    }
+
+    @include mq($phoneLandscape) {
+    
+        display: block;
+        height: $nav-height;
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            flex: 1;
+        }
+
+        a {
+            line-height: $nav-height;
+            @at-root nav li:last-child a {
+                border-right: none;
+            }
+        }
+        
+    }
+
+}

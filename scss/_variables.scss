@@ -4,7 +4,7 @@ $body-bg-color: #303030;
 $footer-bg-color: rgb(33, 45, 59);
 $wrapper-bg-color: white;
 
-$highlight: #7c9eb2;
+$header-border-bar: $footer-bg-color;
 $onyx: #2e3a41;
 $koamaru: #35355a;
 $dark-purp: #291b3e;
@@ -34,8 +34,9 @@ $h3-size: 1.5em;
 $padding: 20px;
 // Grid Values
 $gutter: 2;
-$header-height: 36px;
+$header-height: 84px;
 $max-page-width: 1200px;
+$nav-height: 40px;
 
 // Function to determine column width
 // takes two numerical parameters:
