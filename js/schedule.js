@@ -180,10 +180,12 @@ let schedule = [
     add css classes to days off
 */
 
+
 $(function() {
   const $CALENDAR_CONTAINER = $('#schedule-container');
-  schedule.forEach(addCalendarEntry);
   
+  // schedule generation
+  schedule.forEach(addCalendarEntry);
   function addCalendarEntry({date, topic, staff}) {
     let month = getFormattedMonth(date);
     let monthArticle = getMonthArticle(month);
@@ -191,16 +193,45 @@ $(function() {
     monthArticle.append(entry);
   }
   
+  // calendar toggle
+  let listView = true;
+  const $CALENDAR_TOGGLE = $('#calendar-toggle');
+  $CALENDAR_TOGGLE.click(function() {
+    if (listView) {
+      $CALENDAR_CONTAINER.removeClass('schedule-list');
+      $CALENDAR_CONTAINER.addClass('schedule-calendar');
+      $(this).text('List View');
+      listView = false;
+    } else {
+      $CALENDAR_CONTAINER.removeClass('schedule-calendar');
+      $CALENDAR_CONTAINER.addClass('schedule-list');
+      $(this).text('Calendar View');
+      listView = true;
+    }
+  })
+
+  // revert to list view when window is too narrow
+  $(window).resize(function () {
+    if ($CALENDAR_TOGGLE.css('display') == 'none') {
+      $CALENDAR_CONTAINER.removeClass('schedule-calendar');
+      $CALENDAR_CONTAINER.addClass('schedule-list');
+      $CALENDAR_TOGGLE.text('Calendar View');
+      listView = true;
+    }
+  });
+
+
+  // Calendar Generation functions
   function getMonthArticle(month) {
     if ($(`.${month}`).length) {
       return $(`.${month}`).first();
     }
-  
+
     let newMonthArticle = $(monthArticle(month));
     $CALENDAR_CONTAINER.append(newMonthArticle);
     return newMonthArticle;
   }
-  
+
   function monthArticle(month) {
     return `<article class="month ${month}">
       <h2>${month}</h2>
@@ -211,7 +242,7 @@ $(function() {
       <h3 class="friday weekday-heading">Friday</h3>
     </article>`;
   }
-  
+
   function createArticleEntry(date, topic, staff) {
     return `<article class="day week-${weekIndex(date)} ${weekday(date)} ${isToday(date) ? "today" : ""}">
       <h3>${formatDate(date)}</h3>
@@ -253,13 +284,13 @@ $(function() {
     const startWeekDayIndex = 0; // 1 MonthDay 0 Sundays
     const firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
     const firstDay = firstDate.getDay();
-  
+
     let weekNumber = Math.ceil((date.getDate() + firstDay) / 7);
     if (startWeekDayIndex === 1) {
       if (date.getDay() === 0 && date.getDate() > 1) {
         weekNumber -= 1;
       }
-  
+
       if (firstDate.getDate() === 1 && firstDay === 0 && date.getDate() > 1) {
         weekNumber += 1;
       }
@@ -323,7 +354,7 @@ $(function() {
   function getFormattedMonth(date) {
     return fullMonth(date.split(' ')[0].toLowerCase());
   }
-  
+
   function fullMonth(month) {
     let monthMap = {
       "sep": "september",
@@ -339,7 +370,10 @@ $(function() {
       "jul": "july",
       "aug": "august"
     };
-  
+
     return monthMap[month];
   }
+  
 });
+
+

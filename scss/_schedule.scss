@@ -1,24 +1,77 @@
-// TODO:
-//   highlighting of current day within list view
+.schedule-page {
+  padding: $padding;
+  max-width: $max-page-width;
+  margin: 0 auto;
 
-.calendar {
-  max-width: 800px;
+  h1 {
+    font-size: $h1-size;
+    text-align: center;
+  }
+}
+
+.calendar-options {
+  height: auto;
+  margin: 20px 0;
+  
+  .calendar-toggle {
+    display: none;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    background-color: $highlight;
+    color: white;
+    font-size: $h2-size;
+    font-family: $heading-font;
+
+    @include mq($tabletPortrait) {
+      display: inline-block;
+      text-align: center;
+      width: 210px;
+    }
+  }
+
+}
+
+.schedule {
   margin: 0 auto;
   padding-bottom: 20px;
   background-color: #eaeaea;
-  display: flex;
-  flex-direction: column;
 
   .month {
+
     h2 {
       text-align: center;
       padding: 20px 0;
       margin: 0;
-      background-color: #1f7a8c;
+      background-color: $koamaru;
       color: #fafafa;
-      font-size: 2em;
+      font-size: $h2-size;
     }
 
+    .today {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #35355a71;
+      }
+    }
+
+  } // end month styles
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+
+  .month {
+    
     .weekday-heading {
       display: none;
     }
@@ -29,13 +82,12 @@
       flex-wrap: wrap;
       padding: 5px 15px;
       font-size: 1.2em;
-      border-bottom: 1px solid #1f7a8c;
+      border-bottom: 1px solid $koamaru;
 
       & > * {
         width: 100%;
         margin: 5px 0;
       }
-      
       h3 {
         font-family: $body-font;
         font-size: inherit;
@@ -45,7 +97,13 @@
       &:nth-of-type(2n) {
         background-color: #fff;
       }
-    }
+
+      @include mq($tabletPortrait) {
+        & > * {
+          width: 19%;
+        }
+      }
+    } // end day styles
 
     .weekday {
       text-transform: capitalize;
@@ -53,96 +111,100 @@
     }
 
     .friday {
-      border-bottom: 5px solid #1f7a8c;
+      border-bottom: 5px solid $koamaru;
     }
-
-  }
+    
+  } // end month styles  
 
 }
 
+.schedule-calendar {
 
-// .calendar{
-//   max-width: 1100px;
-//   margin: 0 auto;
-//   padding: 0 20px 20px 20px;
-//   background-color: #eaeaea;
+  .month {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, auto);
+    gap: 3px;
+    padding-top: 30px;
+    margin-bottom: 20px;
 
-//   .month {
-//     display: grid;
-//     grid-template-columns: repeat(5, 1fr);
-//     grid-template-rows: repeat(8, auto);
-//     gap: 3px;
-//     padding-top: 30px;
+    &:first-of-type {
+      padding-top: 0;
+    }
 
-//     h2 {
-//       grid-row: 1 / 2;
-//       grid-column: 1 / 6;
-//       text-align: center;
-//       margin: 10px 0;
-//     }
+    h2 {
+      grid-row: 1 / 2;
+      grid-column: 1 / 6;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-//     .weekday-heading {
-//       grid-row: 2 / 3;
-//       text-align: center;
-//       margin: 0;
-//       background-color: #bfdbf7;
-//       padding: 5px 0;
-//     }
+    .weekday-heading {
+      grid-row: 2 / 3;
+      text-align: center;
+      margin: 0;
+      background-color: $dark-purp;
+      padding: 5px 0;
+      font-size: $h3-size;
+      color: white;
+    }
 
-//     .day {
-//       background-color: #fff;
-//       height: 155px;
-//     }
+    .day {
+      background-color: white;
+      height: 160px;
+      padding: 10px;
+    }
 
-//     .today {
-//       border: 2px solid #1f7a8c;
-//     }
+    .weekday {
+      display: none;
+    }
 
+    // Grid layout
+    .monday {
+      grid-column: 1 / 2;
+      border-left: 3px solid #eaeaea;
+    }
+    
+    .tuesday {
+      grid-column: 2 / 3;
+    }
+    
+    .wednesday {
+      grid-column: 3 / 4;
+    }
+    
+    .thursday {
+      grid-column: 4 / 5;
+    }
+    
+    .friday {
+      grid-column: 5 / 6;
+      border-right: 3px solid #eaeaea;
+    }
 
-//     // Grid layout
-//     .monday {
-//       grid-column: 1 / 2;
-//     }
+    .week-1 {
+      grid-row: 3 / 4;
+    }
     
-//     .tuesday {
-//       grid-column: 2 / 3;
-//     }
+    .week-2 {
+      grid-row: 4 / 5;
+    }
     
-//     .wednesday {
-//       grid-column: 3 / 4;
-//     }
+    .week-3 {
+      grid-row: 5 / 6;
+    }
     
-//     .thursday {
-//       grid-column: 4 / 5;
-//     }
+    .week-4 {
+      grid-row: 6 / 7;
+    }
     
-//     .friday {
-//       grid-column: 5 / 6;
-//     }
-
-//     .week-1 {
-//       grid-row: 3 / 4;
-//     }
+    .week-5 {
+      grid-row: 7 / 8;
+    }
     
-//     .week-2 {
-//       grid-row: 4 / 5;
-//     }
-    
-//     .week-3 {
-//       grid-row: 5 / 6;
-//     }
-    
-//     .week-4 {
-//       grid-row: 6 / 7;
-//     }
-    
-//     .week-5 {
-//       grid-row: 7 / 8;
-//     }
-    
-//     .week-6 {
-//       grid-row: 8 / 9;
-//     }
-//   }
-// }
+    .week-6 {
+      grid-row: 8 / 9;
+    }
+  }
+}
 
