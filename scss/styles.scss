@@ -5,9 +5,13 @@
 
 // Utility
 @import 'variables';
+@import 'mixins';
+
+// Typography
+@import 'typography';
 
 // Fontawesome 
-@import 'fontawesome/fontawesome.scss';
+@import 'fontawesome/fontawesome';
 // TODO: import required fontawesome packs
 
 // Resets and Defaults
@@ -16,9 +20,16 @@
 // Site Sections
 @import 'header';
 @import 'footer';
+
 @import 'contactPage';
 @import 'resources';
 @import 'overview';
-@import 'staff'
+@import 'staff';
 
-// Specialty Items
+@import 'hamburger';
+@import 'nav';
+
+
+// Pgae Styles
+@import 'schedule';
+@import 'homepage';

@@ -1,0 +1,30 @@
+// Media Query Mixin
+@mixin mq($w){
+  @media (min-width: $w){
+      @content;
+  }
+}
+
+// Visually hide an element but
+// still make it accessible to 
+// a screen reader
+@mixin visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// Mixin for clearing out
+// margins and padding and
+// setting the line-height to 1 
+// ...useful mainly on typographic elements
+@mixin flatten {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
