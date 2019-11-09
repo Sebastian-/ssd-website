@@ -87,6 +87,7 @@ node_modules/
 styles/
 styles/*.css
 styles/*.map
+!dist/*
 
 
 # Misc files to ignore #
