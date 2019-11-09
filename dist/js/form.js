@@ -18,13 +18,10 @@ $(document).ready(function () {
                 required: true,
                 minlength:5
             }
-            
-    
+        },
+        submitHandler: function() {
+            window.location.replace("thanks.html");
         }
-    });
-
-    $('#contact-submit').submit(function() {
-        window.location.replace("thanks.html");
     });
     
 });
