@@ -1,57 +1,34 @@
 // Colors
-$brand-color: #8540c5;
-$body-bg-color: #303030;
 $footer-bg-color: rgb(33, 45, 59);
-$wrapper-bg-color: white;
-
 $header-border-bar: $footer-bg-color;
 $onyx: #2e3a41;
 $koamaru: #35355a;
 $dark-purp: #291b3e;
 $eerie-black: #201020;
-
 $link-color: rgb(106, 175, 106);
 
 // Text Colors
 $text-color-dark: black;
 $text-color-light: white;
 
-// Use Color functions to brighten and darken colors
-$brand-color-dark: darken($brand-color, 20);
-$brand-color-light: lighten($brand-color, 20);
-
 // Fonts
 $body-font: 'Open Sans', sans-serif;
 $heading-font: 'Staatliches', cursive;
 // Typographic Defualts
 $line-height: 1.4;
-
 $h1-size: 3em;
 $h2-size: 2.2em;
 $h3-size: 1.5em;
 
 // Layout variables
 $padding: 20px;
-// Grid Values
-$gutter: 2;
 $header-height: 84px;
+$mobile-header-height: 44px;
 $max-page-width: 1200px;
 $nav-height: 40px;
 
-// Function to determine column width
-// takes two numerical parameters:
-// $c -> the number of columns in a row
-// $g -> the gutter amount
-@function colWidth($c, $g: 2){
-    @return ((100 - $g * ($c - 1)) / $c) * 1%;
-}
-
-$one-col: 100%;
-$two-col: colWidth(2);
-$three-col: colWidth(3);
-$four-col: colWidth(4);
-$five-col: colWidth(5);
-$six-col: colWidth(6);
+// Grid Values
+$gutter: 3px;
 
 // Function to
 // Convert Px to Ems

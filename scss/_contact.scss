@@ -1,0 +1,28 @@
+.contact-page {
+    form {
+        display: flex;
+        flex-direction: column;
+        
+        @include mq($phoneLandscape) {
+            width: 65%;
+            margin: 0 auto;
+        }
+
+        .text-inputs {
+            label {
+                display: block;
+            }
+    
+            input + label {
+                margin-left: 10px;
+                color: darkred;
+                display: inline;
+            }
+        }
+        
+    }
+
+    .role-select {
+        padding-left: 15px;
+    }
+}

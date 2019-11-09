@@ -10,10 +10,6 @@
 // Typography
 @import 'typography';
 
-// Fontawesome 
-@import 'fontawesome/fontawesome';
-// TODO: import required fontawesome packs
-
 // Resets and Defaults
 @import 'resets';
 
@@ -24,11 +20,9 @@
 @import 'card-container';
 @import 'hamburger';
 @import 'nav';
-@import 'main';
 
 // Page Styles
+@import 'main';
 @import 'schedule';
 @import 'homepage';
-@import 'contactPage';
-@import 'resources';
-@import 'overview';
+@import 'contact';

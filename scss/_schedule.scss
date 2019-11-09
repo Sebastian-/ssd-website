@@ -76,6 +76,7 @@
         width: 100%;
         margin: 5px 0;
       }
+      
       h3 {
         font-family: $body-font;
         font-size: inherit;
@@ -112,7 +113,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(8, auto);
-    gap: 3px;
+    gap: $gutter;
     padding-top: 30px;
     margin-bottom: 20px;
 
@@ -143,7 +144,7 @@
 
     .day {
       background-color: white;
-      height: 160px;
+      min-height: 160px;
       padding: 10px;
     }
 

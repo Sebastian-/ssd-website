@@ -5,7 +5,12 @@ footer {
     color: $text-color-light;
     height: 100px;
 
+    display: flex;
+    align-items: center;
+
     p {
-        line-height: 100px;
+        margin: 0 0 0 $padding;
+        font-family: $heading-font;
+        font-size: $h3-size;
     }
 }

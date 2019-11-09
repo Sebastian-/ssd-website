@@ -1,5 +1,5 @@
 .accordion-container {
-    height: calc(100vh - #{$header-height} - 30px);
+    height: calc(100vh - #{$mobile-header-height} - 20px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,6 +9,7 @@
     }
 
     @include mq($tabletLandscape) {
+        height: calc(100vh - #{$header-height} - 20px);
         flex-direction: row;
     }
 }
@@ -48,7 +49,6 @@
     }
 
     .accordion-slide {
-        max-height: calc(100vh - #{$header-height} - 20px);
         display: flex;
         flex-direction: column;
         max-width: 750px;
